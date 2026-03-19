@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sharmili A | Cloud Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #333; }
+
+    header {
+      background: #7a8c7e;
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+    header h1 { font-size: 2.5rem; }
+    header p  { font-size: 1rem; margin-top: 6px; color: #dce8dc; }
+
+    .counter-box {
+      text-align: center;
+      background: #fff;
+      padding: 10px;
+      font-size: 0.9rem;
+      color: #7a8c7e;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+
+    .section { background: white; border-radius: 8px; padding: 25px;
+                margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+    .section h2 { color: #7a8c7e; font-size: 1.1rem; border-bottom: 2px solid #eef2ee;
+                   padding-bottom: 8px; margin-bottom: 15px; text-transform: uppercase; }
+
+    .job { margin-bottom: 16px; }
+    .job-title { font-weight: bold; font-size: 1rem; }
+    .job-meta  { font-size: 0.85rem; color: #888; margin-bottom: 6px; }
+    ul { padding-left: 18px; }
+    li { margin-bottom: 5px; font-size: 0.92rem; line-height: 1.5; }
+
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill-tag {
+      background: #eef2ee; color: #4a4a4a;
+      padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;
+    }
+
+    .cert-item { font-size: 0.92rem; margin-bottom: 6px; }
+    .cert-item::before { content: "✓ "; color: #7a8c7e; font-weight: bold; }
+
+    footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #aaa; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sharmili A</h1>
+  <p>Testing Engineer | QA | Azure AZ-900 | AWS Cloud</p>
+  <p style="margin-top:4px; font-size:0.85rem;">
+    📧 sharmiliananthan@gmail.com &nbsp;|&nbsp; 📍 Tenkasi, Tamil Nadu
+  </p>
+</header>
+
+<div class="counter-box">
+  👁️ This page has been visited <span id="count">...</span> times
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <h2>Professional Summary</h2>
+    <p>Azure-certified Testing Engineer with experience in manual & functional testing,
+    test case design, defect tracking, and API testing. Skilled in SQL, Mainframe systems,
+    JIRA, and cross-functional collaboration. Exposure to AI-based automation via Functionize.</p>
+  </div>
+
+  <div class="section">
+    <h2>Experience</h2>
+    <div class="job">
+      <div class="job-title">Testing Engineer — Wipro</div>
+      <div class="job-meta">Chennai, Tamil Nadu | Dec 2024 – Present</div>
+      <ul>
+        <li>Performed manual testing (functional, regression, smoke, UAT) on web-based applications.</li>
+        <li>Used GUI, IRO, ATE, UPoint tools to validate application workflows across modules.</li>
+        <li>Performed API testing using Postman; managed defects in JIRA.</li>
+        <li>Wrote SQL queries to verify backend database consistency.</li>
+        <li>Gained exposure to Functionize, an AI-based test automation tool.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-title">Investigation Data Analyst — Amazon</div>
+      <div class="job-meta">Chennai, Tamil Nadu | Jun 2024 – Dec 2024</div>
+      <ul>
+        <li>Conducted data-driven investigations to identify discrepancies and ensure compliance.</li>
+        <li>Analyzed large datasets to detect patterns and support decision-making.</li>
+        <li>Collaborated cross-functionally to improve processes and maintain data integrity.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <span class="skill-tag">AWS</span>
+      <span class="skill-tag">Microsoft Azure</span>
+      <span class="skill-tag">Manual Testing</span>
+      <span class="skill-tag">API Testing (Postman)</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">JIRA</span>
+      <span class="skill-tag">Mainframe</span>
+      <span class="skill-tag">Linux</span>
+      <span class="skill-tag">Regression Testing</span>
+      <span class="skill-tag">Functionize</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Education</h2>
+    <div class="job">
+      <div class="job-title">B.E. in Electrical and Electronics Engineering</div>
+      <div class="job-meta">Mepco Schlenk Engineering College, Sivakasi | May 2024 | 75.7%</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Certifications</h2>
+    <div class="cert-item">Microsoft Azure Fundamentals (AZ-900)</div>
+    <div class="cert-item">AWS Academy Cloud Foundations</div>
+  </div>
+
+</div>
+
+<footer>Built & hosted on AWS | Sharmili A &copy; 2025</footer>
+
+<script>
+  // This will call your Lambda visitor counter later
+  fetch('YOUR_API_GATEWAY_URL_HERE')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('count').innerText = data.count;
+    })
+    .catch(() => {
+      document.getElementById('count').innerText = '—';
+    });
+</script>
+
+</body>
+</html>
