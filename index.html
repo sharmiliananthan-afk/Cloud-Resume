@@ -57,10 +57,12 @@
   <h1>Sharmili A</h1>
   <p>Testing Engineer | QA | Azure AZ-900 | AWS Cloud</p>
   <p style="margin-top:4px; font-size:0.85rem;">
-    📧 sharmiliananthan@gmail.com &nbsp;|&nbsp; 📍 Tenkasi, Tamil Nadu
+    📧 sharmilianantham@gmail.com &nbsp;|&nbsp;
+💼 <a href="https://linkedin.com/in/yourprofile" style="color:#dce8dc;">LinkedIn</a> &nbsp;|&nbsp;
+🐙 <a href="https://github.com/yourusername" style="color:#dce8dc;">GitHub</a> &nbsp;|&nbsp;
+📍 Tenkasi, Tamil Nadu
   </p>
 </header>
-
 <div class="counter-box">
   👁️ This page has been visited <span id="count">...</span> times
 </div>
@@ -121,6 +123,18 @@
       <div class="job-meta">Mepco Schlenk Engineering College, Sivakasi | May 2024 | 75.7%</div>
     </div>
   </div>
+  <div class="section">
+  <h2>Projects</h2>
+  <div class="job">
+    <div class="job-title">Cloud-Hosted Resume Website — AWS</div>
+    <div class="job-meta">S3 · CloudFront · Lambda · DynamoDB · API Gateway · GitHub Actions | 2025</div>
+    <ul>
+      <li>Deployed personal resume on AWS using S3 + CloudFront CDN with HTTPS</li>
+      <li>Built a serverless visitor counter using Lambda (Python), DynamoDB, and API Gateway</li>
+      <li>Automated deployments with GitHub Actions CI/CD pipeline</li>
+    </ul>
+  </div>
+</div>
 
   <div class="section">
     <h2>Certifications</h2>
@@ -134,7 +148,7 @@
 
 <script>
   // This will call your Lambda visitor counter later
-  fetch('YOUR_API_GATEWAY_URL_HERE')
+  fetch('https://zd9i7l7yci.execute-api.us-east-1.amazonaws.com/prod/count')
     .then(res => res.json())
     .then(data => {
       document.getElementById('count').innerText = data.count;
